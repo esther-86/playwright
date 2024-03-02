@@ -9,6 +9,7 @@ Code generation, replay, and debugging
 5. Have VS Code extension for Playwright installed (https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright) and debug/play the test at the code level. Or... `npx playwright test` to run from command line.
 
 # Resources
-1. https://playwright.dev/docs/getting-started-vscode
-2. https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright
-3. https://chromewebstore.google.com/detail/playwright-chrome-recorde/bfnbgoehgplaehdceponclakmhlgjlpd?pli=1
+1. The post that helped me get this working: https://github.com/microsoft/playwright/issues/11442
+2. https://playwright.dev/docs/getting-started-vscode
+3. https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright
+4. https://chromewebstore.google.com/detail/playwright-chrome-recorde/bfnbgoehgplaehdceponclakmhlgjlpd?pli=1
