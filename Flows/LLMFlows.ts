@@ -159,7 +159,7 @@ class LLMFlows extends CommonFlows {
     });
   };
 
-  static async runPrompt(input: string, options?) {
+  static async runPrompt(page, input: string, options?) {
     if (!options) { options = {} }
     if (!options.port) { options.port = 3000 }
     if (!options.url) { options.url = `http://localhost:${options.port}` }
@@ -186,22 +186,6 @@ class LLMFlows extends CommonFlows {
     if (options.includeCloseBrowserInstruction) {
       input += `When done, close the browser.'`
     }
-
-    // Add data incrementally here because don't want too large payload with too many unnecessary fields
-    if (!My.TestInfo.data.participantInfo) {
-      My.TestInfo.data.participantInfo = My.GeneralHelper.generateParticipantInfo()
-    }
-    const testData = My.TestInfo.data
-    input += `Use these for test data: [
-    ${JSON.stringify({
-      language: testData.language,
-      participantInfoEmail: testData.participantInfo?.email,
-      participantInfoPassword: testData.participantInfo?.password,
-      participantInfoFirstName: testData.participantInfo?.firstName,
-      participantInfoLastName: testData.participantInfo?.lastName,
-      participantInfoUsername: testData.participantInfo?.username,
-    })}]
-    `
 
     input += `Important: Try to complete the actions using the browser and when done, 
     output the playwright code as an output, in two different formats`
