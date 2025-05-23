@@ -1,4 +1,4 @@
-export default class CommonFlows {
+class CommonFlows {
   static async search(page: any, search: string) {
     const searchXPath = "xpath=//input[@title='Google Search']"
     await page.locator(searchXPath).click()
@@ -6,3 +6,5 @@ export default class CommonFlows {
     await page.keyboard.press("Enter");
   }
 }
+
+export { CommonFlows }

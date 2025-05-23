@@ -1,0 +1,5 @@
+node_modules
+.inngest
+.env*
+!.env.sample
+.genkit

@@ -1,5 +1,6 @@
 import Constants from '../Helpers/Constants';
-import CommonFlows from './CommonFlows'
+import { CommonFlows } from './CommonFlows'
+import { LLMFlows } from './LLMFlows'
 
 class My {
   private static instance: My;
@@ -18,6 +19,7 @@ class My {
   // Properties
   public readonly CommonFlows = CommonFlows;
   public readonly Constants = Constants;
+  public readonly LLM = LLMFlows;
 }
 
 export default My.getInstance(); // Exporting the singleton instance
