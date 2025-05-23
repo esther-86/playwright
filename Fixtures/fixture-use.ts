@@ -2,7 +2,7 @@
 /* eslint-disable lines-around-comment */
 import { test as base } from '@playwright/test';
 import { attachToBrowser, launchBrowser, launchPersistentContext } from "./fixture-helpers";
-import My from "./../Flows/My";
+import My from "../Flows/My";
 // const My = require("./../Flows/My")['default'] // instead of import to see My.Env not undefined, else have to use like My.default.Env
 
 // Save data generated from the test to here so that we can choose which data to use when the time comes

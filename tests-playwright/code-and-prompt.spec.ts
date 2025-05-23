@@ -1,4 +1,4 @@
-import { test } from '../Fixtures/fixture-medable';
+import { test } from '../Fixtures/fixture-use';
 import My from '../Flows/My';
 
 const test_data = [
