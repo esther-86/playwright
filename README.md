@@ -13,3 +13,10 @@ Code generation, replay, and debugging
 2. https://playwright.dev/docs/getting-started-vscode
 3. https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright
 4. https://chromewebstore.google.com/detail/playwright-chrome-recorde/bfnbgoehgplaehdceponclakmhlgjlpd?pli=1
+5. https://github.com/tmahesh/playwright-agent
+
+# Prompting
+lsof -ti:8931 | xargs kill -9
+lsof -ti:3000 | xargs kill -9
+npx @playwright/mcp@latest --port 8931 --cdp-endpoint http://localhost:9222
+npx genkit start -- npx tsx --watch genkit.ts
