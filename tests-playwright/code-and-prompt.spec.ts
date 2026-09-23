@@ -8,13 +8,14 @@ for (const current of test_data) {
   test(`Code and Prompt. ${JSON.stringify(current)}`,
     async ({ MyLLM }) => {
       test.setTimeout(5 * 60 * 1000);
+      const searchTerm = 'polo shirts';
       let url: string;
 
       // Start debugging script here
       await MyLLM.page.goto("https://www.automationexercise.com/products");
-      await MyLLM.LLM.runPrompt(`Search for polo shirts. Close dialog if vignette pops up`);
+      await MyLLM.LLM.runPrompt(`Search for ${searchTerm}. Close dialog if vignette pops up`);
 
-      url = await MyLLM.page.url();
-      await expect(url).toContain('search=polo%20shirts');
+      url = (await MyLLM.page.url()).toLowerCase().replace(/%20/g, ' ');
+      await expect(url).toContain(`search=${searchTerm}`);
     });
 }
