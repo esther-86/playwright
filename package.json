@@ -1,0 +1,25 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/mcp": "0.0.82",
+    "@playwright/test": "^1.42.0",
+    "@types/node": "^20.11.22",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
